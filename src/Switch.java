@@ -3,13 +3,14 @@ import javax.swing.JOptionPane;
 public class Switch {
 
 	public static void main(String[] args) {
-		//usar switch em vez de varios if's
+		//use switch instead of various if's
 		//String day = "Saturday";
 		String today = JOptionPane.showInputDialog("What day is today?");
 		
-		//Se o utilizador utilizar letra minuscula, este metodo irá dar uppercase na primeira letra
-		//substring(index start[0] e index final, neste caso [1]
-		String day = today.substring(0,1).toUpperCase() + today.substring(1);
+		//if user uses Upper cases or lower cases, this method string day ... will change it to first upper and lower the rest.
+		//substring(index start[0] and index final, in this case [1])
+		//substring(1).lower will lower case the rest of the letters of this string
+		String day = today.substring(0,1).toUpperCase() + today.substring(1).toLowerCase();
 		
 		switch(day) {
 			case "Sunday":System.out.println("Today is Sunday");
